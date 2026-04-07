@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController3;
 
+use App\Http\Controllers\MovieController1;
+
+Route::get('/', [MovieController1::class, 'index'])->name('home');
+Route::get('/theloai/{id}', [MovieController1::class, 'filterByGenre'])->name('genre.filter');
 Route::get('/', [App\Http\Controllers\MovieController::class, 'index']);
 
 // --- Phần của Người 2 (MovieController2) ---

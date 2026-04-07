@@ -42,7 +42,7 @@
                 max-width:1200px;
                 max-height:200px;
                 height:65vh;
-                background-image:url('{{asset('images/banner.jpg')}}');
+                background-image:url('{{asset('banner.jpg')}}');
                 background-size:cover;
                 color:white;
                 margin:0 auto;
@@ -111,7 +111,7 @@
                     </div>
                     <ul class="list-group list-group-flush list-group-movie">
                        @foreach($genre as $row)
-                       <a href="{{url('/theloai/'.$row->id)}}">{{$row->genre_name_vn}}</a>
+                       <a href="{{ route('genre.filter', ['id' => $row->id]) }}">{{$row->genre_name_vn}}</a>
                        @endforeach
                     </ul>
                     </div>
